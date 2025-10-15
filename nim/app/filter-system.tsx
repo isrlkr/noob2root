@@ -157,7 +157,7 @@ export const FilterSystem: React.FC<FilterSystemProps> = ({
                                   : 'bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
                               )}
                             >
-                              <div className={cn('h-2 w-2 rounded-full', difficultyColors[value])} />
+                              <div className={cn('h-2 w-2 rounded-full', difficultyColors[value as keyof typeof difficultyColors])} />
                               {value.charAt(0).toUpperCase() + value.slice(1)}
                             </motion.button>
                           )
